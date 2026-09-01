@@ -2,7 +2,7 @@
 
 Personal portfolio site for **James Wolfe** — software developer (backend, data engineering, Python & TypeScript) based in Lapu-Lapu City, Cebu.
 
-**Live:** https://james-wolfe-04.github.io/MyPortfolio/
+**Live:** https://james-wolfe-04.github.io/portfolio/
 
 ## Stack
 
