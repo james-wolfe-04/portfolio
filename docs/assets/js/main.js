@@ -4,8 +4,9 @@
     var root = document.documentElement;
 
     /* ---------- Theme toggle ---------- */
+    // Dark is the house style; light only applies once the visitor picks it,
+    // so there is deliberately no prefers-color-scheme listener here.
     var themeToggle = document.getElementById('themeToggle');
-    var media = window.matchMedia('(prefers-color-scheme: dark)');
 
     function syncThemeLabel() {
         var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
@@ -17,15 +18,6 @@
         var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         root.setAttribute('data-theme', next);
         try { localStorage.setItem('jw-theme', next); } catch (e) { /* private mode */ }
-        syncThemeLabel();
-    });
-
-    // Follow the OS only while the visitor has not made an explicit choice.
-    media.addEventListener('change', function (e) {
-        var stored = null;
-        try { stored = localStorage.getItem('jw-theme'); } catch (err) { /* ignore */ }
-        if (stored) return;
-        root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
         syncThemeLabel();
     });
 
@@ -56,7 +48,7 @@
         }
     });
 
-    window.matchMedia('(min-width: 1024px)').addEventListener('change', function (e) {
+    window.matchMedia('(min-width: 1080px)').addEventListener('change', function (e) {
         if (e.matches) setDrawer(false);
     });
 

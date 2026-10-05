@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>James Wolfe Resume</title>
+<!-- Source for docs/assets/files/Resume.pdf. Rebuild with: python resume/build.py -->
+<style>
+    @page { size: Letter; margin: 0.32in 0.48in; }
+    * { box-sizing: border-box; }
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+        font-size: 9.2pt;
+        line-height: 1.3;
+        color: #1b1b1f;
+    }
+    .accent { color: #b3121f; }
+    header { text-align: center; }
+    h1 { margin: 0; font-size: 20pt; font-weight: 700; letter-spacing: 0.06em; }
+    .tagline { margin-top: 2pt; font-size: 10.5pt; font-weight: 600; color: #b3121f; }
+    .contact { margin-top: 2pt; font-size: 9pt; color: #444; }
+    .contact a { color: inherit; text-decoration: none; }
+    h2 {
+        margin: 6pt 0 3pt;
+        padding-bottom: 2pt;
+        font-size: 10pt;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #b3121f;
+        border-bottom: 1.2pt solid #1b1b1f;
+    }
+    p { margin: 0; }
+    .skills p { margin: 1.2pt 0; }
+    b { font-weight: 700; }
+    .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; margin-top: 4pt; }
+    .row .what i { color: #444; }
+    .row .when { font-style: italic; color: #444; white-space: nowrap; }
+    ul { margin: 2pt 0 0; padding-left: 13pt; }
+    li { margin: 1pt 0; }
+    li::marker { color: #b3121f; }
+</style>
+</head>
+<body>
+<header>
+    <h1>JAMES ERNEST TARIMAN WOLFE</h1>
+    <p class="tagline">Software Developer &bull; Full-Stack TypeScript &amp; Python</p>
+    <p class="contact">
+        Lapu-Lapu City, Cebu | <a href="mailto:jameswolfe059@gmail.com">jameswolfe059@gmail.com</a> |
+        <a href="https://www.linkedin.com/in/jameswolfe">linkedin.com/in/jameswolfe</a> |
+        <a href="https://github.com/james-wolfe-04">github.com/james-wolfe-04</a> |
+        <a href="https://james-wolfe-04.github.io/portfolio/">Portfolio</a>
+    </p>
+</header>
+
+<h2>Summary</h2>
+<p>
+    Software developer who turns slow, manual processes into fast, tested web applications. Shipped
+    full-stack features for a U.S.-based team, from PostgreSQL schema to NestJS API to Next.js dashboard, across four
+    production repositories on a code-reviewed, CI-gated workflow. I find where time and accuracy are being lost, fix
+    the cause rather than the symptom, then add the tests and monitoring that keep it fixed.
+</p>
+
+<h2>Technical Skills</h2>
+<div class="skills">
+    <p><b>Frontend:</b> Next.js, React, TypeScript, JavaScript, Tailwind CSS, HTML/CSS, Recharts, TanStack Table, responsive &amp; accessible UI</p>
+    <p><b>Backend &amp; APIs:</b> NestJS, Node.js, RESTful API design, Spring Boot, Supabase, API-key auth, caching, webhooks</p>
+    <p><b>Databases:</b> PostgreSQL / Supabase (schema design, migrations, RPCs, row-level security, indexing), MySQL</p>
+    <p><b>Languages:</b> TypeScript, Python, JavaScript, SQL, Java, Kotlin</p>
+    <p><b>Automation &amp; Data:</b> Python pipelines, data validation, pytest, Playwright, PDF/OCR extraction</p>
+    <p><b>Cloud &amp; Tools:</b> AWS (Cloud Architecting &amp; Foundations), Docker, Git / GitHub (Git-flow, PR review), CI/CD (GitHub Actions), Ruff / ESLint / Prettier, Linux</p>
+</div>
+
+<h2>Work Experience</h2>
+<div class="row">
+    <span class="what"><b>Software Developer</b> | <i>Metawatt LLC, Florida, USA (Remote)</i></span>
+    <span class="when">2026</span>
+</div>
+<ul>
+    <li><b>Gave the team one live view of 30+ data sources across 10 states</b> by building the monitoring system end to end: a run-tracking PostgreSQL schema on Supabase (row-level security, indexed reads), NestJS intake and aggregation APIs, a Python reporting client, and a Next.js dashboard.</li>
+    <li><b>Put decisions on live numbers:</b> shipped the Trends and Breakdowns analytics modules in Next.js, React, and Recharts, covering run volume, coverage by state, failure reasons, and duplicate rates, all wired to production data.</li>
+    <li><b>Made the APIs faster and safer:</b> hardened NestJS/TypeScript endpoints with bounded query parameters and TTL caching to protect the database, API-key guards on intake, and correct state-code mapping for all 50 states.</li>
+    <li><b>Turned raw records into prioritized sales leads:</b> built the Python enrichment layer (record fetchers, a runnable SQL lead definition, net-to-owner scoring from lien priority) so the team works the highest-value leads first.</li>
+    <li><b>Replaced per-county code with one reusable module</b> keyed on the records platform, serving every county on it; each match is checked against the address on file and labeled confirmed, unverified, or mismatched, covered by 100+ unit tests.</li>
+    <li><b>Drove a data-sourcing decision:</b> benchmarked five property-data vendors and wrote the recommendation the team adopted.</li>
+    <li><b>Raised code quality across the team:</b> standardized data payloads across every pipeline with codebase-wide pytest guards; added retries and webhook-delivery tracking to integrations; containerized workers with Docker; reviewed teammates' PRs and kept CI lint gates green (Ruff, ESLint, Prettier).</li>
+</ul>
+
+<div class="row">
+    <span class="what"><b>Web Scraping / Data Analytics Intern</b> | <i>Metawatt LLC, Florida, USA (Remote)</i></span>
+    <span class="when">Jan 2026 to Apr 2026</span>
+</div>
+<ul>
+    <li><b>Promoted to Software Developer</b> at the end of the internship.</li>
+    <li>Automated collection of surplus-fund and lead data from state and county reports in Python (Playwright, Selenium, BeautifulSoup), with custom serialization into structured directories so the analytics team could find and retrieve data faster.</li>
+    <li>Delivered in an Agile team under a Team Leader, managed GitHub repositories, and presented progress on the "Excess Elite Lead Analytics" project.</li>
+</ul>
+
+<h2>Projects</h2>
+<div class="row">
+    <span class="what"><b>ETEEAPP: Academic Application System</b> | <i>Project Manager &amp; Developer &bull; eteeappp.netlify.app</i></span>
+    <span class="when">2025</span>
+</div>
+<ul>
+    <li>Led the development team at Cebu Institute of Technology-University to a live release; wrote much of the backend business logic and frontend architecture.</li>
+</ul>
+<div class="row">
+    <span class="what"><b>KnowledgeForge: Peer Tutoring Platform</b> | <i>Full-Stack Developer &bull; React, Spring Boot</i></span>
+    <span class="when">2024</span>
+</div>
+<ul>
+    <li>Built both the Student and Tutor flows, from the REST API endpoints to the screens each user lands on.</li>
+</ul>
+<div class="row">
+    <span class="what"><b>SleepSync: Wellness App</b> | <i>Mobile Developer &bull; sleepsyncapp.netlify.app</i></span>
+    <span class="when">2024</span>
+</div>
+<ul>
+    <li>Engineered the Android client (Java/Kotlin) of a sleep-quality platform, designed so nightly tracking takes minimal effort.</li>
+</ul>
+
+<h2>Education</h2>
+<div class="row" style="margin-top:2pt">
+    <span class="what"><b>BS Information Technology</b> | <i>Cebu Institute of Technology-University</i></span>
+    <span class="when">2021 to 2026</span>
+</div>
+
+<h2>Certifications</h2>
+<p>AWS Academy Cloud Architecting &nbsp;&bull;&nbsp; AWS Academy Cloud Foundations &nbsp;&bull;&nbsp; Accenture Academy: AWS &nbsp;&bull;&nbsp; Kaggle: Data Visualization</p>
+</body>
+</html>
